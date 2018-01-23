@@ -28,9 +28,10 @@
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'produtos_list' %}" id="download">Categorias <span class="caret"></span></a>
               <ul class="dropdown-menu" aria-labelledby="download">
-                <li><a href="{% url 'produtos_list' %}">Calças</a></li>
-				<li><a href="{% url 'produtos_list' %}">Camisetas</a></li>
-				<li><a href="{% url 'produtos_list' %}">Mochilas</a></li>
+                  {% for category in categories %}
+                <li><a href="#">{{ category.name }}</a></li>
+                  {% endfor %}
+
               </ul>
             </li>
 			<li>
