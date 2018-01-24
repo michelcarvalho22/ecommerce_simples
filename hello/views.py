@@ -7,7 +7,3 @@ def index(request):
 
 def contatos(request):
     return render(request, 'contatos.html')
-
-
-def produto(request):
-    return render(request, 'produto.html')
