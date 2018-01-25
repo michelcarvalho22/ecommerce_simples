@@ -105,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'America/Brasilia'
+TIME_ZONE = 'America/Recife'
 
 USE_I18N = True
 
@@ -113,8 +113,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATICFILES_STORAGE  =  'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
@@ -129,21 +127,3 @@ try:
     from .local_settings import *
 except ImportError:
     pass
-
-"""
-STATIC_URL = '/static/'
-
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
-
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-ALLOWED_HOSTS = ['*']
-
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-
-try:
-    from .local_settings import *
-except ImportError:
-    pass
-"""
