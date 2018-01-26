@@ -9,7 +9,7 @@ import hello.views
 urlpatterns = [
 
     url(r'^$', hello.views.index, name='index'),
-    url(r'^contato/$', hello.views.contatos, name='contatos'),
+    url(r'^contato/$', hello.views.contact, name='contact'),
     path('catalogo/', include('catalog.urls', namespace='catalog')),
     path('admin/', admin.site.urls),
 ]
