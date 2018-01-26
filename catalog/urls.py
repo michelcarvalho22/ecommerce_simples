@@ -2,7 +2,6 @@
 from django.conf.urls import url
 from django.urls import path
 
-
 import catalog.views
 from . import views
 
