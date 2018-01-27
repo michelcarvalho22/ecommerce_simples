@@ -21,7 +21,7 @@ SECRET_KEY = 'CHANGE_ME!!!! (P.S. the SECRET_KEY environment variable will be us
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     # apps
     'hello',
     'catalog',
-
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -125,6 +124,13 @@ ALLOWED_HOSTS = ['*']
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 
 STATIC_URL = '/static/'
+
+# E-mail
+EMAIL_HOST = ''
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+DEFAULT_FROM_EMAIL = 'admin@djangoecommerce.com'
+
 
 try:
     from .local_settings import *

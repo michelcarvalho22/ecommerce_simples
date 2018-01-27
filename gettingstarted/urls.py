@@ -1,15 +1,14 @@
 
-from django.conf.urls import include, url
+from django.conf.urls import include
 from django.urls import path
 from django.contrib import admin
 
-import hello.views
-
+from hello import views
 
 urlpatterns = [
 
-    url(r'^$', hello.views.index, name='index'),
-    url(r'^contato/$', hello.views.contact, name='contact'),
+    path('', views.index, name='index'),
+    path('contato/', views.contact, name='contact'),
     path('catalogo/', include('catalog.urls', namespace='catalog')),
     path('admin/', admin.site.urls),
 ]

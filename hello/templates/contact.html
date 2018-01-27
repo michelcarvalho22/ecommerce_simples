@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load staticfiles %}
+
 {% load widget_tweaks %}
 
 {% block title %}
@@ -7,30 +7,41 @@
 {% endblock %}
 
 {% block container %}
+<div class="page-header">
+    <h1>Fale conosco</h1>
+    {% if success %}
+    <div class="alert alert-success">
+        Mensagem enviada com sucesso
+    </div>
+    {% endif %}
+    <form class="form-horizontal" action="" method="post">
+        {% csrf_token %}
+        <fieldset>
+            {% for field in form %}
+            <div class="form-group{% if field.errors %} has-error{% endif %}">
+              <label for="{{ field.auto_id }}" class="col-md-3 control-label">{{ field.label }}</label>
+              <div class="col-md-9">
+                {% if custom_class %}
+                    {% with "form-control "|add:custom_class as classnames %}
+                        {% render_field field class="classnames" %}
+                    {% endwith %}
+                  {% else %}
+                        {% render_field field class="form-control" %}
+                {% endif %}
 
-    <div class="page-header">
-		<h1>Fale Conosco</h1>
-        <form class="form-horizontal">
-            <fieldset>
-
-                {% for field in form %}
-
-                <div class="form-group">
-                    <label for="{{ field.auto_id }}" class="col-md-3 control-label">{{ field.label }}</label>
-                    <div class="col-md-9">
-                        {% render_field field class='form-control' %}
-                    </div>
-                </div>
-
+                {% for error in field.errors %}
+                <span class="help-block">{{ error }}</span>
                 {% endfor %}
 
-                <div class="form-group">
-                    <div class="col-md-9 col-md-offset-3">
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                    </div>
-                </div>
-            </fieldset>
-        </form>
-    </div>
-
+              </div>
+            </div>
+            {% endfor %}
+            <div class="form-group">
+              <div class="col-md-9 col-md-offset-3">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
 {% endblock %}
