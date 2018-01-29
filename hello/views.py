@@ -1,7 +1,11 @@
+# coding=utf-8
+
 from django.shortcuts import render
-from .forms import ContactForm
+from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.conf import settings
+
+from .forms import ContactForm
 
 
 def index(request):
