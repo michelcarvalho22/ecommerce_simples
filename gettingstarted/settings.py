@@ -101,7 +101,8 @@ USE_L10N = True
 
 USE_TZ = True
 
-DATABASES ['default'] = dj_database_url.config (conn_max_age = 600)
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
@@ -115,7 +116,7 @@ STATIC_URL = '/static/'
 EMAIL_HOST = ''
 EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
-DEFAULT_FROM_EMAIL = 'carloscprojetista@gmail.com'
+DEFAULT_FROM_EMAIL = 'admin@djangoecommerce.com'
 
 
 try:
