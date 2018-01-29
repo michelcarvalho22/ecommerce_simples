@@ -129,7 +129,7 @@ STATIC_URL = '/static/'
 EMAIL_HOST = ''
 EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
-DEFAULT_FROM_EMAIL = 'admin@djangoecommerce.com'
+DEFAULT_FROM_EMAIL = 'carloscprojetista@gmail.com'
 
 
 try:
