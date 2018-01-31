@@ -7,8 +7,8 @@ from hello import views
 
 urlpatterns = [
 
-    path('', views.index, name='index'),
-    path('contato/', views.contact, name='contact'),
+    url('^$', views.index, name='index'),
+    url('^contato/$', views.contact, name='contact'),
     path('catalogo/', include('catalog.urls', namespace='catalog')),
     path('admin/', admin.site.urls),
 ]
