@@ -1,3 +1,5 @@
+# coding=utf-8
+
 from django.test import TestCase, Client
 from django.urls import reverse
 from django.core import mail
@@ -22,6 +24,7 @@ class IndexViewTestCase(TestCase):
 
 
 class ContactViewTestCase(TestCase):
+
     def setUp(self):
         self.client = Client()
         self.url = reverse('contact')
@@ -43,5 +46,4 @@ class ContactViewTestCase(TestCase):
         response = self.client.post(self.url, data)
         self.assertTrue(response.context['success'])
         self.assertEquals(len(mail.outbox), 1)
-        self.assertEquals(mail.outbox[0].subject, 'Contato do PointMix E-Commerce')
-
+        self.assertEquals(mail.outbox[0].subject, 'Contato do Django E-Commerce')

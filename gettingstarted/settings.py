@@ -8,7 +8,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 SECRET_KEY = 'CHANGE_ME!!!! (P.S. the SECRET_KEY environment variable will be used, if set, instead).'
 
-DEBUG = False
+DEBUG = True
 
 # ALLOWED_HOSTS = []
 
@@ -116,7 +116,7 @@ STATIC_URL = '/static/'
 EMAIL_HOST = ''
 EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
-DEFAULT_FROM_EMAIL = 'admin@djangoecommerce.com'
+DEFAULT_FROM_EMAIL = 'admin@usepointmix.com.br'
 
 
 try:

@@ -1,16 +1,11 @@
 # coding=utf-8
 
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.core.mail import send_mail
-from django.conf import settings
-from django.views.generic import View, TemplateView
-
+from django.views.generic import TemplateView
 from .forms import ContactForm
 
 
 class IndexView(TemplateView):
-
     template_name = 'index.html'
 
 
