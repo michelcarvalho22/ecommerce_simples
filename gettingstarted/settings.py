@@ -8,7 +8,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 SECRET_KEY = os.getenv('SECRET_KEY', '123')
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
