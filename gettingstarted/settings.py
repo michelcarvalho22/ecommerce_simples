@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     # apps
     'hello',
+    'accounts',
     'catalog',
 ]
 
@@ -120,6 +121,8 @@ DEFAULT_FROM_EMAIL = 'admin@usepointmix.com.br'
 
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'index'
+LOGOUT_URL = 'logout'
+AUTH_USER_MODEL = 'accounts.user'
 
 try:
     from .local_settings import *
