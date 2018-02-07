@@ -15,7 +15,7 @@ urlpatterns = [
     url('^contato/$', views.contact, name='contact'),
     url('^entrar/$', login, {'template_name': 'login.html'}, name='login'),
     url('^sair/$', logout, {'next_page': 'index'}, name='logout'),
-    path('registro/', views.register, name='register'),
     path('catalogo/', include('catalog.urls', namespace='catalog')),
+    path('conta/', include('accounts.urls', namespace='accounts')),
     path('admin/', admin.site.urls),
 ]
