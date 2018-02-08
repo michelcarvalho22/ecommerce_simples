@@ -1,0 +1,36 @@
+{% extends "accounts/index.html" %}
+
+{% load widget_tweaks %}
+
+{% block title %}Alterar Dados{% endblock %}
+
+{% block accounts_container %}
+    <h2>Alterar Dados</h2>
+    <form class="form-horizontal" action="" method="post">
+        {% csrf_token %}
+        <fieldset>
+            {% for field in form %}
+            <div class="form-group{% if field.errors %} has-error{% endif %}">
+              <label for="{{ field.auto_id }}" class="col-md-3 control-label">{{ field.label }}</label>
+              <div class="col-md-9">
+                    {% if custom_class %}
+                        {% with "form-control "|add:custom_class as classnames %}
+                            {% render_field field class="classnames" %}
+                        {% endwith %}
+                    {% else %}
+                        {% render_field field class="form-control" %}
+                    {% endif %}
+                    {% for error in field.errors %}
+                        <span class="help-block">{{ error }}</span>
+                    {% endfor %}
+              </div>
+            </div>
+            {% endfor %}
+            <div class="form-group">
+              <div class="col-md-9 col-md-offset-3">
+                <button type="submit" class="btn btn-primary">Salvar</button>
+              </div>
+            </div>
+        </fieldset>
+    </form>
+{% endblock %}

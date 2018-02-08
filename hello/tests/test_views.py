@@ -1,3 +1,5 @@
+# coding=utf-8
+
 from django.test import TestCase, Client
 from django.urls import reverse
 from django.core import mail
@@ -11,6 +13,7 @@ User = get_user_model()
 
 
 class IndexViewTestCase(TestCase):
+
     def setUp(self):
         self.client = Client()
         self.url = reverse('index')
@@ -28,6 +31,7 @@ class IndexViewTestCase(TestCase):
 
 
 class ContactViewTestCase(TestCase):
+
     def setUp(self):
         self.client = Client()
         self.url = reverse('contact')
@@ -72,12 +76,13 @@ class LoginViewTestCase(TestCase):
         response = self.client.post(self.login_url, data)
         redirect_url = reverse(settings.LOGIN_REDIRECT_URL)
         self.assertRedirects(response, redirect_url)
+        #self.assertTrue(response.wsgi_request.user.is_authenticated())
 
     def test_login_error(self):
         data = {'username': self.user.username, 'password': '1234'}
         response = self.client.post(self.login_url, data)
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'login.html')
-        error_msg = ('Por favor, entre com um usuário  e senha corretos.'
-        'Note que ambos os campos diferenciam maiúsculas e minúsculas.')
+        error_msg = ('Por favor, entre com um Apelido / Usuário  e senha corretos.'
+        ' Note que ambos os campos diferenciam maiúsculas e minúsculas.')
         self.assertFormError(response, 'form', None, error_msg)
