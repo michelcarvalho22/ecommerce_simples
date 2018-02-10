@@ -1,7 +1,6 @@
-
 import os
 import dj_database_url
-
+from django.contrib.messages import constants as messages_constants
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -25,7 +24,7 @@ INSTALLED_APPS = [
     'hello',
     'accounts',
     'catalog',
-    'checkout'
+    'checkout',
 ]
 
 MIDDLEWARE = [
@@ -119,17 +118,17 @@ EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
 DEFAULT_FROM_EMAIL = 'admin@usepointmix.com.br'
 
+# auth
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'index'
 LOGOUT_URL = 'logout'
-AUTH_USER_MODEL = 'accounts.user'
+AUTH_USER_MODEL = 'accounts.User'
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'accounts.backends.ModelBackend',
 )
 
 # Messages
-from django.contrib.messages import constants as messages_constants
 MESSAGE_TAGS = {
     messages_constants.DEBUG: 'debug',
     messages_constants.INFO: 'info',
@@ -138,7 +137,3 @@ MESSAGE_TAGS = {
     messages_constants.ERROR: 'danger',
 }
 
-try:
-    from .local_settings import *
-except ImportError:
-    pass
