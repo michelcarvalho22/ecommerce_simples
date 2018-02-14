@@ -56,7 +56,7 @@ class Order(models.Model):
 
     STATUS_CHOICES = (
         (0, 'Aguardando Pagamento'),
-        (1, 'Concluida'),
+        (1, 'Concluída'),
         (2, 'Cancelada'),
     )
 
@@ -76,14 +76,13 @@ class Order(models.Model):
     )
 
     created = models.DateTimeField('Criado em', auto_now_add=True)
-    modified = models.DateTimeField('Modicado em', auto_now=True)
+    modified = models.DateTimeField('Modificado em', auto_now=True)
 
     objects = OrderManager()
 
-
-class Meta:
-    verbose_name = 'Pedido'
-    verbose_name_plural = 'Pedidos'
+    class Meta:
+        verbose_name = 'Pedido'
+        verbose_name_plural = 'Pedidos'
 
     def __str__(self):
         return 'Pedido #{}'.format(self.pk)
@@ -91,7 +90,7 @@ class Meta:
 
 class OrderItem(models.Model):
 
-    order = models.ForeignKey(Order, on_delete='Pedido', verbose_name='items')
+    order = models.ForeignKey(Order, on_delete='Pedido', related_name='items')
     product = models.ForeignKey('catalog.Product', on_delete='Produto')
     quantity = models.PositiveIntegerField('Quantidade', default=1)
     price = models.DecimalField('Preço', decimal_places=2, max_digits=8)
