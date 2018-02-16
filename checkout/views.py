@@ -1,3 +1,5 @@
+# coding=utf-8
+
 from pagseguro import PagSeguro
 
 from paypal.standard.forms import PayPalPaymentsForm
@@ -86,6 +88,7 @@ class CheckoutView(LoginRequiredMixin, TemplateView):
             order = Order.objects.create_order(
                 user=request.user, cart_items=cart_items
             )
+            cart_items.delete()
         else:
             messages.info(request, 'Não há itens no carrinho de compras')
             return redirect('checkout:cart_item')
@@ -100,7 +103,7 @@ class OrderListView(LoginRequiredMixin, ListView):
     paginate_by = 10
 
     def get_queryset(self):
-        return Order.objects.filter(user=self.request.user)
+        return Order.objects.filter(user=self.request.user).order_by('-pk')
 
 
 class OrderDetailView(LoginRequiredMixin, DetailView):
@@ -146,9 +149,7 @@ class PaypalView(LoginRequiredMixin, TemplateView):
         paypal_dict['cancel_return'] = self.request.build_absolute_uri(
             reverse('checkout:order_list')
         )
-        paypal_dict['notify_url'] = self.request.build_absolute_uri(
-            reverse('paypal-ipn')
-        )
+
         context['form'] = PayPalPaymentsForm(initial=paypal_dict)
         return context
 
