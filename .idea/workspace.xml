@@ -2,244 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87c7f5f4-92c5-403e-8145-99f0a4dab2b9" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/catalog/migrations/0003_auto_20180224_1904.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/catalog/migrations/0004_product_carroucel.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/catalog/migrations/0005_product_descricao_completa.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/catalog/migrations/0006_auto_20180902_2129.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/catalog/migrations/0007_auto_20180902_2137.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/catalog/migrations/0008_auto_20180902_2148.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/catalog/migrations/0009_auto_20180902_2152.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/catalog/migrations/0010_auto_20180904_2215.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/catalog/templates/catalog/carrousel.example" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/admin.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/apps.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/models.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/css/bootstrap.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/css/easy-responsive-tabs.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/css/flexslider.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/css/font-awesome.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/css/jquery-ui.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/css/style.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/css/team.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/fonts/FontAwesome.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/fonts/fontawesome-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/fonts/fontawesome-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/fonts/fontawesome-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/fonts/fontawesome-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/fonts/fontawesome-webfont.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/fonts/glyphicons-halflings-regular.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/fonts/glyphicons-halflings-regular.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/fonts/glyphicons-halflings-regular.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/fonts/glyphicons-halflings-regular.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/fonts/glyphicons-halflings-regular.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/ab_pic.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/arrow.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/b1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/b2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/b3.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/b4.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/b5.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/b6.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/b7.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/b8.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/banner1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/banner2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/banner3.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/banner4.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/banner5.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/bb1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/bb2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/bot_1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/bot_2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/bottom1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/bottom2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/bottom3.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/bottom4.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/btn_next.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/btn_pause.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/btn_play.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/btn_prev.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/close_1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/d1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/d2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/d3.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/inner1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/inner2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/log_pic.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/m1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/m2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/m3.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/m4.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/m5.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/m6.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/m7.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/m8.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/mark1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/mid.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/s1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/s2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/s3.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/s4.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/s5.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/s6.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/s7.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/s8.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/s8.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/search.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/t1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/t2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/t3.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/t4.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/tick-mark1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/top1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/top2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/up_arrow.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/w1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/w2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/w3.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/w4.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/w5.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/w6.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/w7.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/images/w8.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/js/bootstrap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/js/easy-responsive-tabs.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/js/imagezoom.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/js/jquery-2.1.4.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/js/jquery-ui.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/js/jquery.countup.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/js/jquery.easing.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/js/jquery.flexslider.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/js/jquery.waypoints.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/js/minicart.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/js/modernizr.custom.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/js/move-top.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/assets/js/responsiveslides.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/static/humans.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/tests.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/core/views.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/design/account.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/design/assets/extra.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/design/assets/font-awesome-4.6.3/css/font-awesome.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/design/assets/font-awesome-4.6.3/css/font-awesome.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/design/assets/font-awesome-4.6.3/fonts/FontAwesome.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/design/assets/font-awesome-4.6.3/fonts/fontawesome-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/design/assets/font-awesome-4.6.3/fonts/fontawesome-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/design/assets/font-awesome-4.6.3/fonts/fontawesome-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/design/assets/font-awesome-4.6.3/fonts/fontawesome-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/design/assets/font-awesome-4.6.3/fonts/fontawesome-webfont.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/design/base.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/design/cart.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/design/checkout.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/design/contact.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/design/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/design/login.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/design/product.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/design/products.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/design/register.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/hello/migrations/0003_promocao.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/hello/migrations/0004_auto_20180228_0945.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/hello/migrations/0005_remove_promocao_image.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/hello/templates/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/Untitled.ipynb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/Activate.ps1" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/activate" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/activate.bat" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/asadmin" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/bundle_image" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/cfadmin" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/chardetect.exe" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/cq" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/cwutil" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/deactivate.bat" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/django-admin.exe" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/django-admin.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/dynamodb_dump" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/dynamodb_load" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/easy_install-3.6.exe" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/easy_install.exe" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/elbadmin" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/fetch_file" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/glacier" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/gunicorn.exe" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/gunicorn_paster.exe" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/instance_events" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/jp.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/kill_instance" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/launch_instance" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/list_instances" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/lss3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/mturk" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/pip.exe" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/pip3.6.exe" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/pip3.exe" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/pyami_sendmail" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/python.exe" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/python3.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/python36.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/pythonw.exe" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/route53" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/rst2html.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/rst2html4.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/rst2html5.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/rst2latex.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/rst2man.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/rst2odt.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/rst2odt_prepstyles.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/rst2pseudoxml.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/rst2s5.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/rst2xetex.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/rst2xml.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/rstpep2html.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/s3put" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/sdbadmin" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/sqlite3.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/taskadmin" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/tcl86t.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/tk86t.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/Scripts/vcruntime140.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/pip-selfcheck.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pmixvenv/pyvenv.cfg" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/User.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/python-getting-started.iml" afterPath="$PROJECT_DIR$/.idea/pointmix.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/accounts/models.py" afterPath="$PROJECT_DIR$/accounts/models.py" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/accounts/register.html" afterPath="$PROJECT_DIR$/accounts/templates/accounts/register.html" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/accounts/update_user.html" afterPath="$PROJECT_DIR$/accounts/templates/accounts/update_user.html" />
-      <change beforePath="$PROJECT_DIR$/catalog/__init__.py" afterPath="$PROJECT_DIR$/catalog/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/catalog/admin.py" afterPath="$PROJECT_DIR$/catalog/admin.py" />
-      <change beforePath="$PROJECT_DIR$/catalog/apps.py" afterPath="$PROJECT_DIR$/catalog/apps.py" />
-      <change beforePath="$PROJECT_DIR$/catalog/models.py" afterPath="$PROJECT_DIR$/catalog/models.py" />
-      <change beforePath="$PROJECT_DIR$/catalog/templates/catalog/_product.html" afterPath="$PROJECT_DIR$/catalog/templates/catalog/_product.html" />
-      <change beforePath="$PROJECT_DIR$/catalog/templates/catalog/product.html" afterPath="$PROJECT_DIR$/catalog/templates/catalog/product.html" />
-      <change beforePath="$PROJECT_DIR$/catalog/templates/catalog/product_list.html" afterPath="$PROJECT_DIR$/catalog/templates/catalog/product_list.html" />
-      <change beforePath="$PROJECT_DIR$/catalog/views.py" afterPath="$PROJECT_DIR$/catalog/views.py" />
-      <change beforePath="$PROJECT_DIR$/checkout/templates/checkout/cart.html" afterPath="$PROJECT_DIR$/checkout/templates/checkout/cart.html" />
-      <change beforePath="$PROJECT_DIR$/checkout/templates/checkout/checkout.html" afterPath="$PROJECT_DIR$/checkout/templates/checkout/checkout.html" />
-      <change beforePath="$PROJECT_DIR$/checkout/templates/checkout/order_list.html" afterPath="$PROJECT_DIR$/checkout/templates/checkout/order_list.html" />
-      <change beforePath="$PROJECT_DIR$/checkout/views.py" afterPath="$PROJECT_DIR$/checkout/views.py" />
-      <change beforePath="$PROJECT_DIR$/gettingstarted/s3util.py" afterPath="$PROJECT_DIR$/gettingstarted/s3util.py" />
-      <change beforePath="$PROJECT_DIR$/gettingstarted/settings.py" afterPath="$PROJECT_DIR$/gettingstarted/settings.py" />
-      <change beforePath="$PROJECT_DIR$/gettingstarted/static/humans.txt" afterPath="$PROJECT_DIR$/core/migrations/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/gettingstarted/urls.py" afterPath="$PROJECT_DIR$/gettingstarted/urls.py" />
-      <change beforePath="$PROJECT_DIR$/hello/admin.py" afterPath="$PROJECT_DIR$/hello/admin.py" />
-      <change beforePath="$PROJECT_DIR$/hello/apps.py" afterPath="$PROJECT_DIR$/hello/apps.py" />
-      <change beforePath="$PROJECT_DIR$/hello/models.py" afterPath="$PROJECT_DIR$/hello/models.py" />
-      <change beforePath="$PROJECT_DIR$/hello/static/assets/__init__.py" afterPath="$PROJECT_DIR$/core/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/hello/static/assets/bootstrap.min.css" afterPath="$PROJECT_DIR$/design/assets/bootstrap.min.css" />
-      <change beforePath="$PROJECT_DIR$/hello/static/assets/bootstrap.min.js" afterPath="$PROJECT_DIR$/design/assets/bootstrap.min.js" />
-      <change beforePath="$PROJECT_DIR$/hello/static/assets/custom.min.css" afterPath="$PROJECT_DIR$/design/assets/custom.min.css" />
       <change beforePath="$PROJECT_DIR$/hello/templates/base.html" afterPath="$PROJECT_DIR$/hello/templates/base.html" />
-      <change beforePath="$PROJECT_DIR$/hello/templates/contact.html" afterPath="$PROJECT_DIR$/hello/templates/contact.html" />
-      <change beforePath="$PROJECT_DIR$/hello/templates/index.html" afterPath="$PROJECT_DIR$/hello/templates/index.html" />
-      <change beforePath="$PROJECT_DIR$/hello/templates/pagination.html" afterPath="$PROJECT_DIR$/hello/templates/pagination.html" />
-      <change beforePath="$PROJECT_DIR$/hello/views.py" afterPath="$PROJECT_DIR$/hello/views.py" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -267,11 +30,24 @@
         <entry file="file://$PROJECT_DIR$/hello/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="405" column="0" lean-forward="true" selection-start-line="405" selection-start-column="0" selection-end-line="405" selection-end-column="0" />
+              <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
               <folding>
+                <element signature="e#5822#5829#1" expanded="true" />
+                <element signature="e#8214#8221#1" expanded="true" />
+                <element signature="e#13943#13950#1" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -322,16 +98,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="carrousel.example" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/templates/catalog/carrousel.example">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="107" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="107" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="product.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog/templates/catalog/product.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -342,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/checkout/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="61" column="21" lean-forward="true" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
+            <state relative-caret-position="136">
+              <caret line="67" column="13" lean-forward="true" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -388,9 +154,9 @@
         <option value="$PROJECT_DIR$/catalog/templates/catalog/product_list.html" />
         <option value="$PROJECT_DIR$/catalog/templates/catalog/_product.html" />
         <option value="$PROJECT_DIR$/catalog/views.py" />
-        <option value="$PROJECT_DIR$/hello/templates/base.html" />
         <option value="$PROJECT_DIR$/catalog/models.py" />
         <option value="$PROJECT_DIR$/catalog/templates/catalog/product.html" />
+        <option value="$PROJECT_DIR$/hello/templates/base.html" />
       </list>
     </option>
   </component>
@@ -539,17 +305,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hello/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2414">
-          <caret line="142" column="108" lean-forward="false" selection-start-line="142" selection-start-column="88" selection-end-line="142" selection-end-column="108" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/catalog/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -628,6 +383,9 @@
         <state relative-caret-position="2414">
           <caret line="142" column="108" lean-forward="true" selection-start-line="142" selection-start-column="88" selection-end-line="142" selection-end-column="108" />
           <folding>
+            <element signature="e#5822#5829#1" expanded="true" />
+            <element signature="e#8214#8221#1" expanded="true" />
+            <element signature="e#13943#13950#1" expanded="true" />
             <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -718,6 +476,9 @@
         <state relative-caret-position="3638">
           <caret line="214" column="13" lean-forward="false" selection-start-line="214" selection-start-column="13" selection-end-line="214" selection-end-column="13" />
           <folding>
+            <element signature="e#5822#5829#1" expanded="true" />
+            <element signature="e#8214#8221#1" expanded="true" />
+            <element signature="e#13943#13950#1" expanded="true" />
             <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -898,17 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hello/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="405" column="0" lean-forward="true" selection-start-line="405" selection-start-column="0" selection-end-line="405" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/catalog/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -937,8 +687,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/checkout/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="61" column="21" lean-forward="true" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
+        <state relative-caret-position="136">
+          <caret line="67" column="13" lean-forward="true" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hello/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding>
+            <element signature="e#5822#5829#1" expanded="true" />
+            <element signature="e#8214#8221#1" expanded="true" />
+            <element signature="e#13943#13950#1" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
           <folding />
         </state>
       </provider>
