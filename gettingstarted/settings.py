@@ -200,7 +200,7 @@ THUMBNAIL_ALIASES = {
         'product_image': {'size': (300, 300), 'crop': True},
     },
 }
-# THUMBNAIL_DEFAULT_STORAGE = DEFAULT_FILE_STORAGE
+THUMBNAIL_DEFAULT_STORAGE = STATIC_URL
 
 try:
     from .local_settings import *
