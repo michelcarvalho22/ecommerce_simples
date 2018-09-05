@@ -1,3 +1,9 @@
+
 from django.contrib import admin
 
-# Register your models here.
+
+class PromocaoAdmin(admin.ModelAdmin):
+        pass
+
+
+

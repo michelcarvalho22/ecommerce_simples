@@ -1,5 +1,4 @@
 
-
 import os
 import dj_database_url
 
@@ -16,10 +15,9 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = os.getenv('SECRET_KEY', '123')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -34,7 +32,8 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'easy_thumbnails',
     'paypal.standard.ipn',
-    # apps
+     # apps
+    'core',
     'hello',
     'accounts',
     'catalog',
@@ -133,7 +132,7 @@ MEDIA_URL = '/media/'
 
 ALLOWED_HOSTS = ['*']
 
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -141,7 +140,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 EMAIL_HOST = ''
 EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
-DEFAULT_FROM_EMAIL = 'admin@djangoecommerce.com'
+DEFAULT_FROM_EMAIL = 'carlos@usepointmix.com.br'
 
 # auth
 LOGIN_URL = 'login'
@@ -155,6 +154,7 @@ AUTHENTICATION_BACKENDS = (
 
 # Messages
 from django.contrib.messages import constants as messages_constants
+
 MESSAGE_TAGS = {
     messages_constants.DEBUG: 'debug',
     messages_constants.INFO: 'info',
@@ -169,6 +169,7 @@ PAGSEGURO_SANDBOX = True
 
 PAYPAL_TEST = True
 PAYPAL_EMAIL = 'carloscprojetista@gmail.com'
+
 
 # AWS
 STATICFILES_LOCATION = 'static'

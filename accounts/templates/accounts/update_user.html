@@ -20,6 +20,7 @@
                     {% else %}
                         {% render_field field class="form-control" %}
                     {% endif %}
+
                     {% for error in field.errors %}
                         <span class="help-block">{{ error }}</span>
                     {% endfor %}

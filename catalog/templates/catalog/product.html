@@ -7,24 +7,89 @@
 {% load thumbnail %}
 
 {% block container %}
-<div class="page-header">
-  <h1>{{ product }}</h1>
-</div>
-<div class="row">
-  <div class="col-sm-4">
-      <a href="{{ product.get_absolute_url }}">
-            {% if product.image %}
-            <img src="{{ product.image|thumbnail_url:'product_image' }}" alt="" />
-            {% else %}
-            <img src="http://UsePointMix/300x300" alt="" />
-            {% endif %}
-        </a>
-  </div>
-  <div class="col-sm-8">
-      <p class="text-right">
-          <a href="{% url 'checkout:create_cartitem' product.slug %}" class="btn btn-success">Adicionar ao Carrinho</a>
-      </p>
-      {{ product.description|linebreaks }}
-  </div>
-</div>
+
+
+
+
+<div class="banner-bootom-w3-agileits">
+	<div class="container">
+	     <div class="col-md-4 single-right-left ">
+			<div class="grid images_3_of_2">
+				<div class="flexslider">
+
+					<ul class="slides">
+						<li data-thumb="images/d2.jpg">
+							<div class="thumb-image"> <img src="{{ product.image|thumbnail_url:'product_image' }}" data-imagezoom="true" class="img-responsive"> </div>
+						</li>
+						{% if product.image1 %}
+						<li data-thumb="images/d1.jpg">
+							<div class="thumb-image"> <img src="{{ product.image|thumbnail_url:'product_image' }}" data-imagezoom="true" class="img-responsive"> </div>
+						</li>
+						{% endif %}
+						{% if product.image2 %}
+						<li data-thumb="images/d3.jpg">
+							<div class="thumb-image"> <img src="{{ product.image|thumbnail_url:'product_image' }}" data-imagezoom="true" class="img-responsive"> </div>
+						</li>
+						{% endif %}
+					</ul>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-8 single-right-left simpleCart_shelfItem">
+					<h3>{{ product  }}</h3>
+					<p><span class="item_price">R${{ product.price }}</span></p>
+					<div class="color-quality">
+						<div class="color-quality-right">
+							<h5>Tamanho :</h5>
+							<select id="country1" onchange="change_country(this.value)" class="frm-field required sect">
+							</select>
+						</div>
+					</div>
+		      </div>
+    		  <div class="col-md-4">
+				<br>
+				<a class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2" href="{% url 'checkout:create_cartitem' product.slug %}">
+				  Adicionar ao carrinho
+				</a>
+			  </div>
+	 		  <div class="clearfix"> </div>
+				<!-- /new_arrivals -->
+	<div class="responsive_tabs_agileits">
+				<div id="horizontalTab">
+						<ul class="resp-tabs-list">
+							<li>Descrição</li>
+						</ul>
+					<div class="resp-tabs-container">
+					<!--/tab_one-->
+					   <div class="tab1">
+
+							<div class="single_page_agile_its_w3ls">
+							   <p>{{ product.descricao_completa|linebreaks }}</p>
+							</div>
+						</div>
+						<!--//tab_one-->
+
+
+					</div>
+				</div>
+			</div>
+	<!-- //new_arrivals -->
+	  	<!--/slider_owl-->
+
+
+
+ </div>
+
+
+
+
+{% endblock %}
+
+
+{% block javascript %}
+    $('.flexslider').flexslider({
+			animation: "slide",
+			controlNav: "thumbnails"
+	});
 {% endblock %}

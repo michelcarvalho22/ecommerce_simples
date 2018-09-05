@@ -2,5 +2,5 @@ from django.apps import AppConfig
 
 
 class HelloConfig(AppConfig):
-    name = 'core'
+    name = 'hello'
     verbose_name = 'Comum'

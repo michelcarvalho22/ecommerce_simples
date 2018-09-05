@@ -1,19 +1,31 @@
-{% load thumbnail %}
-<div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-        <a href="{{ product.get_absolute_url }}">
-            {% if product.image %}
-            <img src="{{ product.image|thumbnail_url:'product_image' }}" alt="" />
-            {% else %}
-            <img src="http://placehold.it/300x300" alt="" />
-            {% endif %}
-        </a>
-        <div class="caption">
-            <h3>{{ product }}</h3>
-            {{ product.description|linebreaks }}
-            <p><a href="{{ product.get_absolute_url }}" class="btn btn-success"
-            role="button">Detalhes</a> <a href="{% url 'checkout:create_cartitem' product.slug %}"
-            class="btn btn-default" role="button">Adicionar</a></p>
-        </div>
-    </div>
-</div>
+{% load  thumbnail static %}
+
+
+
+  <div class="col-md-3 product-men">
+      <div class="men-pro-item simpleCart_shelfItem">
+          <div class="men-thumb-item">
+             {% if product.image %}
+              <img src="{{ product.image|thumbnail_url:'product_image' }}" alt="" class="pro-image-front">
+              <img src="{{ product.image|thumbnail_url:'product_image' }}" alt="" class="pro-image-back">
+              {% else %}
+              <img src="http://placehold.it/300x300" alt="" />
+               {% endif %}
+                  <div class="men-cart-pro">
+                      <div class="inner-men-cart-pro">
+                          <a href="{{ product.get_absolute_url }}" class="link-product-add-cart">Detalhes</a>
+                      </div>
+                  </div>
+          </div>
+          <div class="item-info-product ">
+              <h4><a href="single.html">{{ product }}</a></h4>
+              <div class="info-product-price">
+                  <span class="item_price">R$ {{ product.price }}</span>
+                  <!--<del>$69.71</del>-->
+              </div>
+              <a class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2" href="{% url 'checkout:create_cartitem' product.slug %}">
+                  Adicionar ao carrinho
+              </a>
+          </div>
+      </div>
+  </div>

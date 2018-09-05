@@ -11,6 +11,7 @@ Meus Pedidos
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
+
             <th>
                 ID
             </th>
@@ -23,11 +24,17 @@ Meus Pedidos
             <th>
                 Data
             </th>
+            <th>
+                Total R$
+            </th>
+
         </tr>
     </thead>
     <tbody>
         {% for order in object_list %}
         <tr>
+
+
             <td>
                 <a href="{% url 'checkout:order_detail' order.pk %}">#{{ order.pk }}</a>
             </td>
@@ -41,6 +48,9 @@ Meus Pedidos
             </td>
             <td>
                 {{ order.created|date:"d/m/Y" }}
+            </td>
+            <td>
+                {{ order.total|floatformat:"2" }}
             </td>
         </tr>
         {% endfor %}
