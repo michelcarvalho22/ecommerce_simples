@@ -3,6 +3,7 @@ from django.urls import reverse
 
 
 class Greeting(models.Model):
+<<<<<<< HEAD
     when = models.DateTimeField('date created', auto_now_add=True)
 
 
@@ -23,3 +24,6 @@ class Promocao(models.Model):
 
     def get_absolute_url(self):
         return reverse('hello:index', kwargs={'slug': self.slug})
+=======
+    when = models.DateTimeField("date created", auto_now_add=True)
+>>>>>>> 9a41ac0e2988172bbf5e17295857bc863053ce8a

@@ -18,11 +18,16 @@ from .forms import ContactForm
 User = get_user_model()
 
 def index(request):
+<<<<<<< HEAD
     return redirect('catalog:product_list')
 
 
 
 def contact(request):
+=======
+    # return HttpResponse('Hello from Python!')
+    return render(request, "index.html")
+>>>>>>> 9a41ac0e2988172bbf5e17295857bc863053ce8a
 
     success = False
     form = ContactForm(request.POST or None)
@@ -46,4 +51,8 @@ def promocao(request, slug):
     }
     return render(request, 'catalog/product.html', context)
 
+<<<<<<< HEAD
 
+=======
+    return render(request, "db.html", {"greetings": greetings})
+>>>>>>> 9a41ac0e2988172bbf5e17295857bc863053ce8a
