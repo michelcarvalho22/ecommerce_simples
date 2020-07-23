@@ -1,4 +1,4 @@
-/*--
+﻿/*--
 Author: W3layouts
 Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
@@ -550,8 +550,8 @@ a.simpleCart_empty {
 /*-- //banner-top --*/
 .carousel-caption {
     position: inherit;
-    min-height:300px!important;
-    padding-top:05em;
+    min-height:500px!important;
+    padding-top:10em;
 }
 /*-- banner --*/  
 .carousel-caption h2, .carousel-caption h3 {

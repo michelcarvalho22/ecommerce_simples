@@ -18,17 +18,17 @@
 				<div class="flexslider">
 
 					<ul class="slides">
-						<li data-thumb="images/d2.jpg">
+						<li data-thumb="{{ product.image|thumbnail_url:'product_image' }}">
 							<div class="thumb-image"> <img src="{{ product.image|thumbnail_url:'product_image' }}" data-imagezoom="true" class="img-responsive"> </div>
 						</li>
 						{% if product.image1 %}
-						<li data-thumb="images/d1.jpg">
-							<div class="thumb-image"> <img src="{{ product.image|thumbnail_url:'product_image' }}" data-imagezoom="true" class="img-responsive"> </div>
+						<li data-thumb="{{ product.image1|thumbnail_url:'product_image' }}">
+							<div class="thumb-image"> <img src="{{ product.image1|thumbnail_url:'product_image' }}" data-imagezoom="true" class="img-responsive"> </div>
 						</li>
 						{% endif %}
 						{% if product.image2 %}
-						<li data-thumb="images/d3.jpg">
-							<div class="thumb-image"> <img src="{{ product.image|thumbnail_url:'product_image' }}" data-imagezoom="true" class="img-responsive"> </div>
+						<li data-thumb="{{ product.image2|thumbnail_url:'product_image' }}">
+							<div class="thumb-image"> <img src="{{ product.image2|thumbnail_url:'product_image' }}" data-imagezoom="true" class="img-responsive"> </div>
 						</li>
 						{% endif %}
 					</ul>
@@ -36,26 +36,47 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-8 single-right-left simpleCart_shelfItem">
-					<h3>{{ product  }}</h3>
-					<p><span class="item_price">R${{ product.price }}</span></p>
-					<div class="color-quality">
+		<form action="{{ product.get_absolute_url }}" method="post" id="form_kart">
+			{% csrf_token %}
+			<div class="col-md-8 single-right-left simpleCart_shelfItem">
+				<h3>{{ product  }}</h3>
+				<p><span class="item_price">R${{ product.price }}</span></p>
+				<div class="row">
+					{% if product.tamanho %}
+					<div class="color-quality col-md-3">
 						<div class="color-quality-right">
 							<h5>Tamanho :</h5>
-							<select id="country1" onchange="change_country(this.value)" class="frm-field required sect">
+							<select id="tamanho" onchange="change_country(this.value)" class="frm-field required sect" name="tamanho">
+								{% for tamanho in product.tamanho_list %}
+								<option>{{ tamanho }}</option>
+								{% endfor %}
 							</select>
 						</div>
 					</div>
-		      </div>
-    		  <div class="col-md-4">
-				<br>
-				<a class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2" href="{% url 'checkout:create_cartitem' product.slug %}">
-				  Adicionar ao carrinho
-				</a>
-			  </div>
-	 		  <div class="clearfix"> </div>
-				<!-- /new_arrivals -->
-	<div class="responsive_tabs_agileits">
+					{% endif %}
+					{% if product.cor %}
+					<div class="color-quality">
+						<div class="color-quality-right">
+							<h5>Cor :</h5>
+							<select id="cor" onchange="change_country(this.value)" class="frm-field required sect" name="cor">
+								{% for cor in product.cor_list %}
+								<option>{{ cor }}</option>
+								{% endfor %}
+							</select>
+						</div>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+			<div class="col-md-4">
+			<br>
+			<a  id="submit_form" class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+			  Adicionar ao carrinho
+			</a>
+		</div>
+	    <div class="clearfix"> </div>
+		</form>
+	        <div class="responsive_tabs_agileits">
 				<div id="horizontalTab">
 						<ul class="resp-tabs-list">
 							<li>Descrição</li>
@@ -69,8 +90,6 @@
 							</div>
 						</div>
 						<!--//tab_one-->
-
-
 					</div>
 				</div>
 			</div>
@@ -92,4 +111,11 @@
 			animation: "slide",
 			controlNav: "thumbnails"
 	});
+
+	$("#submit_form").on("click",function(e){
+  		$('#form_kart').submit();
+	});
+
+
+
 {% endblock %}

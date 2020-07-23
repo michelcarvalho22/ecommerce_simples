@@ -39,8 +39,8 @@ class Product(models.Model):
         'Imagem2', upload_to='products', blank=True, null=True
     )
 
-    tamanho = models.ManyToManyField('catalog.Tamanho')
-    cor = models.ManyToManyField('catalog.Cor')
+    tamanho = models.CharField('Tamanho',max_length=100,blank=True)
+    cor = models.CharField('Cor',max_length=100,blank=True)
 
     created = models.DateTimeField('Criado em', auto_now_add=True)
     modified = models.DateTimeField('Modificado em', auto_now=True)
@@ -57,6 +57,11 @@ class Product(models.Model):
     def get_absolute_url(self):
         return reverse('catalog:product', kwargs={'slug': self.slug})
 
+    def tamanho_list(self):
+        return self.tamanho.split(",")
+
+    def cor_list(self):
+        return self.cor.split(",")
 
 
 

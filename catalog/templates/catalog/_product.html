@@ -23,7 +23,11 @@
                   <span class="item_price">R$ {{ product.price }}</span>
                   <!--<del>$69.71</del>-->
               </div>
-              <a class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2" href="{% url 'checkout:create_cartitem' product.slug %}">
+              <a class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2" {% if product.cor  or product.tamanho %}
+                                                                                                href="{{ product.get_absolute_url }}"
+                                                                                            {% else %}
+                                                                                            href="{% url 'checkout:create_cartitem' product.slug %}"
+                                                                                            {% endif %}>
                   Adicionar ao carrinho
               </a>
           </div>

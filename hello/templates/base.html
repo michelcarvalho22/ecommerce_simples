@@ -41,8 +41,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="header-bot">
 	<div class="header-bot_inner_wthreeinfo_header_mid">
 		<div class="col-md-4 header-middle">
-			<form action="#" method="post">
-					<input type="search" name="search" placeholder="Pesquisar..." required="">
+			<form action="{% url  'catalog:product_list' %}" method="post">
+					{% csrf_token %}
+					<input type="search" name="descricao" placeholder="Pesquisar..." required="">
 					<input type="submit" value=" ">
 				<div class="clearfix"></div>
 			</form>
@@ -53,21 +54,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
         <!-- header-bot -->
 		<div class="col-md-4 agileits-social top_content">
+
             <ul class="social-nav model-3d-0 footer-social w3_agile_social">
-               <li class="share">Compartilhe: </li>
-                <li><a href="#" class="facebook">
-                      <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-                      <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
-                <li><a href="#" class="twitter">
-                      <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-                      <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
-                <li><a href="#" class="instagram">
-                      <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-                      <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
-                <li><a href="#" class="pinterest">
-                      <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
-                      <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
+                {% if empresa.link_facebook %}
+                <li class="share">Compartilhe: </li>
+                {% endif %}
+                {% if empresa.link_twitter %}
+                <li class="share">Compartilhe: </li>
+                {% endif %}
+                {% if empresa.link_instagran %}
+                <li class="share">Compartilhe: </li>
+                {% endif %}
+                {% if empresa.link_facebook %}
+                <li class="share">Compartilhe: </li>
+                {% endif %}
+                {% if empresa.link_linkedin %}
+                    <li><a href="{{ empresa.link_facebook  }}" class="facebook">
+                          <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                          <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
+                    {% endif %}
+                    {% if empresa.link_twitter %}
+                    <li><a href="{{ empresa.link_twitter }}" class="twitter">
+                          <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                          <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
+                    {% endif %}
+                    {% if empresa.link_instagran %}
+                    <li><a href="{{ empresa.link_instagran }}" class="instagram">
+                          <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                          <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
+                    {% endif %}
+                    {% if empresa.link_linkedin %}
+                    <li><a href="{{ empresa.link_linkedin }}" class="pinterest">
+                          <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                          <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
+                    {% endif %}
+
             </ul>
+
 		</div>
 		<div class="clearfix"></div>
 	</div>
@@ -107,11 +130,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!--Carrinho de compras-->
 		<div class="top_nav_right">
 			<div class="wthreecartaits wthreecartaits2 cart cart box_1">
-                <form action="#" method="post" class="last">
-                    <input type="hidden" name="cmd" value="_cart">
-                    <input type="hidden" name="display" value="1">
-                    <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
-                </form>
+                    <button class="w3view-cart" id="carrinho" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
 			</div>
 		</div>
 		<div class="clearfix"></div>
@@ -240,20 +259,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="footer_agile_inner_info_w3l">
 		<div class="col-md-3 footer-left">
 			<h2><a href="index.html"><span>Point</span>Mix </a></h2>
-			<p>Descrição da Loja</p>
+			<p>{{ empresa.descricao_empresa }}</p>
 			<ul class="social-nav model-3d-0 footer-social w3_agile_social two">
-															<li><a href="#" class="facebook">
+															{% if empresa.link_facebook %}
+                                                            <li><a href="{{ empresa.link_facebook  }}" class="facebook">
 																  <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
 																  <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="twitter">
+                                                            {% endif %}
+                                                            {% if empresa.link_twitter %}
+															<li><a href="{{ empresa.link_twitter }}" class="twitter">
 																  <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
 																  <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="instagram">
+                                                            {% endif %}
+                                                            {% if empresa.link_instagran %}
+															<li><a href="{{ empresa.link_instagran }}" class="instagram">
 																  <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
 																  <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="pinterest">
+                                                            {% endif %}
+                                                            {% if empresa.link_linkedin %}
+															<li><a href="{{ empresa.link_linkedin }}" class="pinterest">
 																  <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
 																  <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
+                                                            {% endif %}
 														</ul>
 		</div>
 		<div class="col-md-9 footer-right">
@@ -271,7 +298,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<div class="w3-address-right">
 								<h6>Telefone</h6>
-								<p>+1 234 567 8901</p>
+								<p>{{ empresa.telefone }}</p>
 							</div>
 							<div class="clearfix"> </div>
 						</div>
@@ -281,7 +308,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<div class="w3-address-right">
 								<h6>Email de Contato</h6>
-								<p>Email :<a href="mailto:example@email.com"> mail@example.com</a></p>
+								<p>Email :<a href="mailto:{{ empresa.email }}"> {{ empresa.email }}</a></p>
 							</div>
 							<div class="clearfix"> </div>
 						</div>
@@ -291,7 +318,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<div class="w3-address-right">
 								<h6>Local</h6>
-								<p>Av. Paulista 542, São Paulo - SP
+								<p>{{ empresa.endereco }}, {{ empresa.numero }} - {{ empresa.complemento }} - {{ empresa.cidade }},
+								   {{ empresa.uf }}
 
 								</p>
 							</div>
@@ -409,6 +437,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		$(document).ready(function() {
 
 			$('.counter').countUp();
+
+			$("#carrinho").on("click",function(e){
+   				 window.location.href = "{% url 'checkout:cart_item' %}"
+			});
 
 
 			$(".scroll").click(function(event){

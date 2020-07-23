@@ -9,6 +9,19 @@ from catalog.models import Product
 
 class CartItemManager(models.Manager):
 
+    def add_item2(self, cart_key, product,cor,tamanho):
+        if self.filter(cart_key=cart_key, product=product,cor=cor,tamanho=tamanho).exists():
+            created = False
+            cart_item = self.get(cart_key=cart_key, product=product)
+            cart_item.quantity = cart_item.quantity + 1
+            cart_item.save()
+        else:
+            created = True
+            cart_item = CartItem.objects.create(
+                cart_key=cart_key, product=product, price=product.price,tamanho=tamanho,cor=cor
+            )
+        return cart_item, created
+
     def add_item(self, cart_key, product):
         if self.filter(cart_key=cart_key, product=product).exists():
             created = False
@@ -23,6 +36,7 @@ class CartItemManager(models.Manager):
         return cart_item, created
 
 
+
 class CartItem(models.Model):
 
     cart_key = models.CharField(
@@ -31,13 +45,14 @@ class CartItem(models.Model):
     product = models.ForeignKey('catalog.Product', on_delete='Produto')
     quantity = models.PositiveIntegerField('Quantidade', default=1)
     price = models.DecimalField('Preço', decimal_places=2, max_digits=8)
-
+    cor = models.CharField('Cor', max_length=20,null=True,blank=True)
+    tamanho = models.CharField('Tamanho',max_length=20,null=True,blank=True)
     objects = CartItemManager()
 
     class Meta:
         verbose_name = 'Item do Carrinho'
         verbose_name_plural = 'Itens dos Carrinhos'
-        unique_together = (('cart_key', 'product'),)
+        unique_together = (('cart_key', 'product','cor','tamanho'),)
 
     def __str__(self):
         return '{} [{}]'.format(self.product, self.quantity)
@@ -50,7 +65,7 @@ class OrderManager(models.Manager):
         for cart_item in cart_items:
             order_item = OrderItem.objects.create(
                 order=order, quantity=cart_item.quantity, product=cart_item.product,
-                price=cart_item.price
+                price=cart_item.price,cor=cart_item.cor,tamanho=cart_item.tamanho
             )
         return order
 
@@ -164,6 +179,8 @@ class OrderItem(models.Model):
     product = models.ForeignKey('catalog.Product', on_delete='Produto')
     quantity = models.PositiveIntegerField('Quantidade', default=1)
     price = models.DecimalField('Preço', decimal_places=2, max_digits=8)
+    cor = models.CharField('Cor', max_length=20,blank=True,null=True)
+    tamanho = models.CharField('Tamanho', max_length=20,blank=True,null=True)
 
     class Meta:
         verbose_name = 'Item do pedido'
